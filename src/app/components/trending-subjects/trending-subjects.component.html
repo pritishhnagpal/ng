@@ -1,0 +1,16 @@
+<div *ngIf="allBooks.length > 0">
+  <div class="tw-m-8">
+    <a routerLink="/" routerLinkActive="active">Home</a>
+  </div>
+
+  <front-end-internship-assignment-table-view
+    [booksList]="allBooks"
+    [subjectName]="subjectName"
+  ></front-end-internship-assignment-table-view>
+</div>
+<div
+  *ngIf="isLoading"
+  class="tw-w-[100%] tw-flex tw-justify-center tw-items-center tw-h-96"
+>
+  <span class="tw-text-24-px">Loading!!</span>
+</div>
